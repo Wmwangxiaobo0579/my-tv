@@ -250,15 +250,15 @@ object AerialSettings {
         pinSet = pinHash != null
         pinArrows = prefs.getBoolean("pin_arrows", false)
         oneRowHome = prefs.getBoolean("one_row_home", true)
-        peekNextRow = prefs.getBoolean("peek_next_row", true)
+        peekNextRow = prefs.getBoolean("peek_next_row", false)
         chosenColumns = prefs.getInt("home_columns", DEFAULT_HOME_COLUMNS).takeIf { it in HOME_COLUMNS } ?: DEFAULT_HOME_COLUMNS
         clockRight = prefs.getBoolean("clock_right", false)
-        largeClock = prefs.getBoolean("large_clock", false)
+        largeClock = prefs.getBoolean("large_clock", true)
         clockHours = ClockHours.of(prefs.getString("clock_hours", null))
         homeLocked = prefs.getBoolean("home_locked", false)
         photoMinutes = prefs.getInt("photo_minutes", DAY_MINUTES).takeIf { it in PHOTO_MINUTES } ?: DAY_MINUTES
-        homePlate = prefs.getBoolean("home_plate", true)
-        chosenAllNames = prefs.getBoolean("show_all_names", false)
+        homePlate = prefs.getBoolean("home_plate", false)
+        chosenAllNames = prefs.getBoolean("show_all_names", true)
         wallpaperAlwaysMoves = prefs.getBoolean("wallpaper_always_moves", false)
         showWeather = prefs.getBoolean("show_weather", true)
         screensaverClock = prefs.getBoolean("screensaver_clock", true)
